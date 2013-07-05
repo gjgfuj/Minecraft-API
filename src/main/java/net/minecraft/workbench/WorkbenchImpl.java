@@ -33,4 +33,10 @@ public abstract class WorkbenchImpl {
      * @param plugin {@link Plugin} object.
      */
     public abstract void registerPlugin(Plugin plugin);
+    /**
+     * Runs the tick method on all plugins registered on this implementation.
+     * 
+     *
+     */
+    public abstract void tickPlugins();
 }
