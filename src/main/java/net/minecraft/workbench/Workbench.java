@@ -1,5 +1,6 @@
 package net.minecraft.workbench;
 
+import net.minecraft.workbench.plugin.Plugin;
 import net.minecraft.workbench.server.Server;
 
 /**
@@ -41,5 +42,10 @@ public final class Workbench {
     public static void setInstance(WorkbenchImpl value) {
         if (value == null) throw new IllegalArgumentException("Instance cannot be null");
         impl = value;
+    }
+
+    public static void log(Plugin plugin, String string) {
+	System.out.println("[".concat(plugin.getName().concat("] ".concat(string))));
+	
     }
 }
