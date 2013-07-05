@@ -1,5 +1,6 @@
 package net.minecraft.workbench;
 
+import net.minecraft.workbench.plugin.Plugin;
 import net.minecraft.workbench.server.Server;
 
 /**
@@ -26,4 +27,10 @@ public abstract class WorkbenchImpl {
      * @return Server object.
      */
     public abstract Server getServer();
+    /**
+     * Registers a plugin for use by this implementation of Workbench.
+     * 
+     * @param plugin {@link Plugin} object.
+     */
+    public abstract void registerPlugin(Plugin plugin);
 }
