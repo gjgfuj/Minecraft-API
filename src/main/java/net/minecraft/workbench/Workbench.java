@@ -43,9 +43,13 @@ public final class Workbench {
         if (value == null) throw new IllegalArgumentException("Instance cannot be null");
         impl = value;
     }
-
+    /**
+     * A log function for plugins to use.
+     * @param plugin The plugin doing the logging.
+     * @param string What to log.
+     */
     public static void log(Plugin plugin, String string) {
-	System.out.println("[".concat(plugin.getName().concat("] ".concat(string))));
+	impl.log(plugin, string);
 	
     }
 }

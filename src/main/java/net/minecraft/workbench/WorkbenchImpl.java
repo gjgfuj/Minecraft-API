@@ -39,4 +39,6 @@ public abstract class WorkbenchImpl {
      *
      */
     public abstract void tickPlugins();
+
+    public abstract void log(Plugin plugin, String string);
 }
